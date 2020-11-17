@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  vault:
+    image: vault:1.6.0
+    cap_add:
+    - IPC_LOCK
+    ports:
+    - 8200:8200
+    - 8201:8201
+    volumes:
+    - ./certs:/vault/certs
+    - ./config:/vault/config
+    - ./data:/vault/data
+    command: server

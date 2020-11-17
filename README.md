@@ -42,3 +42,14 @@ vault write -f auth/approle/role/spring/secret-id
 Update `spring.cloud.vault.app-role.role-id` and `spring.cloud.vault.app-role.secret-id` with values retrieved above.
 
 Run the app and go to http://localhost:8080/actuator/info
+
+You'll see
+
+```
+{
+  "vault": {
+    "name": "demo",
+    "message": "Hello World!"
+  }
+}
+```
